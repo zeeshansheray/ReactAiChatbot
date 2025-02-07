@@ -13,8 +13,6 @@ Both synchronous and asynchronous loading is supported.
 ## Demo
 You can view a live demo of both synchronous and asynchronous loading here: 
 
-https://bjgrosse.github.io/simple-embeddable-react-widget/dist/
-
 ## Usage Example #1: Synchronous
 This method uses simple <script> tag reference as shown below:
 
@@ -78,10 +76,3 @@ $ ./node_modules/.bin/webpack --config webpack.config.js
 ```
 $ Jest
 ```
-
-# Acknowledgments
-I found helpful guidance in this project from the following sites:
-
-https://blog.jenyay.com/building-javascript-widget/
-
-https://github.com/seriousben/embeddable-react-widget
