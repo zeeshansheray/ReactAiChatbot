@@ -14,7 +14,10 @@ This project provides a simple template for an embeddable React widget that can 
 
 ---
 
-## Usage Example #1: Synchronous  
+## Demo
+![Alt text](assets/chatbot_response.png)
+
+## Usage Example 
 This method uses a simple `<script>` tag reference as shown below:  
 
 ```html
@@ -34,11 +37,6 @@ The host page can then communicate with the widget via the global object, such a
 <div><button onclick="w1('message', 'Hello world!');">Send Message</button></div>
 ```
 
-<<<<<<< HEAD
-In this code, we send the **message** call to the widget and pass a string as the parameter.
-
-This code follows the pattern used by Google Analytics. The function is called with the desired name of the global object (**w1**) and the url to the script. The function then records the desired name and, using that name, creates a placeholder global object that receives and queues any calls made to the widget before the asynchronous loading finishes.
-=======
 This follows a pattern similar to Google Analytics, where the function records the desired global object name (**w1**) and queues any calls made to the widget before asynchronous loading completes. The script dynamically injects itself into the DOM and initializes the widget with the following command:
 
 ```html
@@ -46,7 +44,6 @@ w1('init', { targetElementId: 'root' });
 ```
 
 ---
->>>>>>> 732e2462a185afaf2f83e29049b4df31389e5088
 
 ## OpenAI Integration  
 This widget can be enhanced with OpenAI’s API to process user inputs and provide intelligent responses. Below is an example of how the widget can interact with OpenAI’s API:
