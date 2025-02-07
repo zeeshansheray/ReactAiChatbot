@@ -10,16 +10,13 @@ Both synchronous and asynchronous loading is supported.
 4. The widget renders the React component at the element specified by the host page
 5. The host page can communicate with the widget via the global object
 
-## Demo
-You can view a live demo of both synchronous and asynchronous loading here: 
-
 ## Usage Example #1: Synchronous
 This method uses simple <script> tag reference as shown below:
 
 ```html
     <div id="root"></div>
     
-    <script src="http://somehost/widget.js"  
+    <script src="https://somehost/widget.js"  
             id="Simple-Widget-Script" 
             data-config="{'name': 'w1', 'config': {'targetElementId': 'root'}}" ></script>
 ```
@@ -33,21 +30,6 @@ The host page can then communicate with the widget via the global object like th
 ```
 
 In this code, we send the **message** call to the widget and pass a string as the parameter.
-
-## Usage Example #2: Asynchronous
-We can load the widget asynchronously. Using this method we create a *temporary* object that holds any calls to the widget in a queue and when the widget loads, it will then process those calls.
-
-```html
-<div id="root">Loading...</div>
-<script>
-    (function (w, d, s, o, f, js, fjs) {
-        w['Simple-Widget'] = o; w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
-        js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
-        js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
-    }(window, document, 'script', 'w1', 'http://somehost/widget.js'));
-    w1('init', { targetElementId: 'root' });
-</script>
-```
 
 This code follows the pattern used by Google Analytics. The function is called with the desired name of the global object (**w1**) and the url to the script. The function then records the desired name and, using that name, creates a placeholder global object that receives and queues any calls made to the widget before the asynchronous loading finishes.
 
