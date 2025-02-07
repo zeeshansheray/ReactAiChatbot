@@ -46,28 +46,7 @@ w1('init', { targetElementId: 'root' });
 ---
 
 ## OpenAI Integration  
-This widget can be enhanced with OpenAI’s API to process user inputs and provide intelligent responses. Below is an example of how the widget can interact with OpenAI’s API:
-
-```javascript
-async function fetchAIResponse(userInput) {
-    const response = await fetch('https://api.openai.com/v1/completions', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer YOUR_OPENAI_API_KEY`
-        },
-        body: JSON.stringify({
-            model: 'gpt-4',
-            prompt: userInput,
-            max_tokens: 100
-        })
-    });
-    const data = await response.json();
-    return data.choices[0].text.trim();
-}
-```
-
-This function can be integrated into the widget to generate AI-powered responses dynamically.  
+This widget can be enhanced with OpenAI’s API to process user inputs and provide intelligent responses. Below is an example of how the widget can interact with OpenAI’s API: 
 
 ---
 
