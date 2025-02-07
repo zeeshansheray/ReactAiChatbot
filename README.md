@@ -4,17 +4,6 @@ This project provides a simple template for an embeddable React widget that can 
 
 ---
 
-<<<<<<< HEAD
-## Usage Example #1: Synchronous
-This method uses simple <script> tag reference as shown below:
-
-```html
-    <div id="root"></div>
-    
-    <script src="https://somehost/widget.js"  
-            id="Simple-Widget-Script" 
-            data-config="{'name': 'w1', 'config': {'targetElementId': 'root'}}" ></script>
-=======
 ## Overview  
 1. The widget is instantiated when the `.js` package is loaded.  
 2. The host page supplies a **name** and a **targetElementId**.  
@@ -35,7 +24,6 @@ This method uses a simple `<script>` tag reference as shown below:
         id="Simple-Widget-Script"  
         data-config="{'name': 'w1', 'config': {'targetElementId': 'root'}}">  
 </script>
->>>>>>> 732e2462a185afaf2f83e29049b4df31389e5088
 ```
 
 The `data-config` attribute passes in the name **w1** for the widget's global object and the target element ID **root** where the widget should be rendered.  
