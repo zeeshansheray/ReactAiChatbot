@@ -1,7 +1,7 @@
 {
-  "name": "simple-widget",
+  "name": "chatbotbackend",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project provides a simple template for an embeddable React widget that can be inserted into a host website using a single `<script>` tag. It supports JSX, CSS styles, and is compiled using Webpack into a single `.js` file that can be static-hosted. Additionally, it leverages OpenAI's API to process user inputs, generate responses, or enhance interactivity within the widget.",
   "scripts": {
     "build": "set NODE_OPTIONS=--openssl-legacy-provider && npx webpack --config webpack.config.js --mode production --env.production",
     "start": "set NODE_OPTIONS=--openssl-legacy-provider && cross-env webpack-dev-server --open --mode development --env.development",
@@ -39,5 +39,6 @@
     "moduleNameMapper": {
       "^.+\\.(css|scss)$": "<rootDir>/jest/staticHandler.js"
     }
-  }
+  },
+  "main": "webpack.config.js"
 }
